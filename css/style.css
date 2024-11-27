@@ -1,0 +1,538 @@
+/* Universal Styles */
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  
+}
+
+.main-content {
+  position: relative;
+  top: 5.3125rem; /* To offset for fixed header. */
+}
+
+.center {
+  text-align: center;
+}
+
+.button {
+  border-radius: 4px;
+  background-color: #4a4a4a;
+  color: white;
+}
+
+.image-container {
+  overflow: hidden;
+}
+
+.image-container img {
+  display: block;
+}
+
+/* Header */
+
+header {
+  position: fixed;
+  width: 100%;
+  border-bottom: solid 1px #c6c1c1;
+  background-color: white;
+  flex: 1;
+}
+
+header .content {
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  justify-content: space-around; /* Distributes space evenly */
+  align-items: center;          /* Vertically aligns items */
+  height: 85px; 
+}
+
+header .logo {
+  flex: 1;
+  color: #4a4a4a;
+  font-size: 24px;
+  font-family: 'Roboto Mono', sans-serif;
+}
+
+header nav ul {
+  display: flex;
+}
+
+nav li {
+  padding-left: 3.5rem;
+}
+
+nav a {
+  vertical-align: bottom;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #4a4a4a;
+  font-family: Roboto-Regular, sans-serif;
+}
+
+header .icon {
+  width: 1rem;
+  padding-left: .75rem;
+}
+
+header .mobile {
+  display: none;
+}
+
+
+@media screen and (max-width: 450px) {
+  
+  header {
+    /* height: 1rem; i have to fix the part under */
+    
+  }
+
+  nav li {
+    padding-left: 3.5rem;
+}
+
+  header .content {   
+    min-height: 48px; /* Ensure minimum height */
+    padding: 0;
+    justify-content: flex-start;
+    align-items: center;
+    line-height: 48px; /* Set line height to match the height of the header */
+  }
+
+  header .content .desktop {
+    display: none;
+  }
+
+
+  header .mobile {
+    display: flex;
+  }
+
+  header .mobile .only_icon {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+
+  header .mobile li .button {
+    padding: 0.5rem 2rem;
+    background-color: #9dc20b;
+    line-height: 1.6;
+    color: white;
+    display: inline-flex; /* Show only the 'Join us' button */
+    text-align: center;
+    white-space: nowrap; /* Prevents line breaks */
+    bottom: 2px;
+    position: relative;
+  }
+
+}
+
+
+@media only screen and (min-width: 451px) and (max-width: 768px)  {
+
+  header .mobile {
+    display: flex; /* Show mobile navigation container */
+    justify-content: center; /* Center items if needed */
+  }
+
+  header .desktop li a {
+    white-space: nowrap; /* Prevents line breaks */
+    
+  }
+
+  header .content .desktop {
+    padding: .5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /* Distributes space evenly */
+    height: 85px; 
+  }
+  
+
+  header .mobile .only_icon {
+    padding: 0;
+    display: none; /* Hide all list items */
+  }
+
+  header .mobile li .button {
+    padding: .1875rem .5rem;
+    background-color: #9dc20b;
+    line-height: 1.6;
+    color: white;
+    display: inline-block; /* Show only the 'Join us' button */
+    white-space: nowrap; /* Prevents line breaks */
+  }
+
+
+}
+
+/* Sign Up Section */
+
+#sign-up-section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 100px;
+  padding-top: 170px;
+  padding-bottom: 170px;
+  background-image: url("../images/banner-landingpage.jpg");
+}
+
+/* 1 rem = 16px*/
+
+#sign-up-cta {
+  padding: 0 5rem 2.5rem 5rem;
+  border: solid 1px #979797;
+  border-radius: 4px;
+  background-color: #9dc20b;
+  margin: 0;
+}
+
+#sign-up-cta .content {
+  width: 25.625rem;
+  margin-top: 2rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  color: white;
+}
+
+#sign-up-cta h1 {
+  font-size: 3.125rem;
+}
+
+#sign-up-cta h2 {
+  font-size: 2.25rem;
+}
+
+#sign-up-cta span strong {
+  font-weight: bold;
+}
+
+#sign-up-cta .cursive {
+  font-family: "Damion", cursive;
+}
+
+#sign-up-cta .striking {
+  font-family: "Rubik", sans-serif;
+  padding-bottom: .75rem;
+}
+
+#sign-up-cta .button {
+  margin-top: 1.625rem;
+  padding: 1.25rem 7.25rem;
+}
+/* I will work on here I need to put the letters in the center*/
+@media only screen and (max-width: 768px) {
+  #sign-up-section {
+    padding-left: 0;
+    height: 28rem;
+    justify-content: center;
+    align-items: center;
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-repeat: no-repeat; /* Prevents tiling */
+    height: 15rem; /* Adjust to your preferred height */
+  }
+
+  #sign-up-cta {
+    position: static;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+  }
+
+  #sign-up-cta .content {
+    margin-top: 0;
+  }
+
+  #sign-up-cta .email {
+    display: none;
+  }
+
+  #sign-up-cta h1 {
+    font-size: 3.125rem;
+  }
+
+  #sign-up-cta h2 {
+    font-size: 2.25rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #sign-up-section {
+    height: 20rem;
+    background-size: cover;
+  }
+
+  #sign-up-cta h1 {
+    font-size: 2.25rem;
+  }
+
+  #sign-up-cta h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Features Section */
+
+#features-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem 5%;
+  background-color: #f3f3f3;
+  gap: 38px;
+}
+
+.feature {
+  flex: 1;
+  padding: 2rem 2rem 0 2rem;
+  margin: 0px 1.25rem;
+  background-color: white;
+  height: 635px;
+  display: flex;
+}
+
+.feature .image-container img {
+  max-width: 100%;
+  height: auto;
+  
+}
+
+.feature .content {
+  height: 187px;
+  margin-top: 70px;
+  align-content: start;
+}
+
+.feature h2 {
+  padding-bottom: .5rem;
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: #4a4a4a;
+}
+
+.feature h3 {
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 300;
+  color: #4a4a4a;
+}
+
+@media only screen and (max-width: 890px) {
+  .feature h2 {
+    font-size: 1.125rem;
+    line-height: 1.3;
+  }
+
+  .feature h3 {
+    font-size: .875rem;
+    line-height: 1.4;
+  }
+}
+
+/* Mobile L screen  */
+
+@media only screen and (max-width: 450px) {
+  body #features-section {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body #features-section {
+    padding: 1%;
+    gap: 1rem;
+  }
+
+  .feature {
+    margin: 0;
+    width: 100%; /* Full width */
+    padding: 1.25rem 1rem 0 1rem;
+    box-sizing: border-box;
+    height: 400px;  /* Fixed height */
+
+  }
+
+  .feature .content {
+    height: auto;
+    margin: 1rem 0;
+    align-content: start;
+    flex-grow: 1; /* Both .image-container and .content take equal height */
+  }
+
+  
+}
+
+/* Filters Section */
+
+#filters-section {
+  padding: 4rem 0;
+  background-color: #4a4a4a;
+  
+}
+
+#filters-section .content {
+  padding: 0 .625rem;
+  margin-bottom: 5rem;
+}
+
+#filters-section .content h2 {
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: white;
+}
+
+#filters-section .content h3 {
+  font-size: 1rem;
+  line-height: 1.4;
+  font-weight: 300;
+  color: white;
+}
+
+#filters-section .images-container {
+  max-width: 100%;
+  padding: 0 1%;
+  display: flex;
+}
+
+#filters-section .image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  #filters-section {
+    padding: 3rem 0 0 0;
+  }
+
+  #filters-section .content {
+    margin-bottom: 3rem;
+
+  }
+
+  #filters-section .content h2 {
+    padding-bottom: .625rem;
+    font-size: 1.125rem;
+    line-height: 1.3;
+    font-weight: bold;
+  }
+
+  #filters-section .content h3 {
+    font-size: .875rem;
+    line-height: 1.4;
+  }
+
+  #filters-section .images-container {
+    padding: 0;
+  }
+
+
+  
+}
+
+/* Quotes Section */
+
+#quotes-section {
+  background-color: #f3f3f3;
+  display: flex;
+  
+  justify-content: center;
+}
+
+#quotes-section .content {
+  padding: 5rem 0;
+  align-content: center;
+}
+
+#quotes-section .content .quote {
+  padding-right: 1.875rem;
+  font-family: "Palatino", 'EB Garamond', serif;
+  font-size: 1.875rem;
+  line-height: 1.1;
+  font-style: italic;
+  color: #4a4a4a;
+  
+}
+
+#quotes-section .quote-citation {
+  height: 1.875rem;
+  position: relative; /* or absolute if required */
+  top: 5px; /* Moves the logo down */
+}
+
+/* Mobile L */
+
+@media only screen and (max-width: 450px) {
+  #quotes-section .content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #quotes-section .content {
+    padding: 1.875rem .625rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  #quotes-section .quote {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    flex: 1;
+    padding: 0 1rem; /* Add horizontal padding to reduce space on the sides */
+  }
+
+  #quotes-section .content .quote {
+    padding-right: 1.875rem;
+  }
+
+  #quotes-section .quote-citation {
+    margin-right: 1rem; /* Space between logo and quote, adjust as needed */
+    flex-shrink: 0;
+    top: 0;
+  }
+
+
+
+}
+
+/* Footer */
+
+footer {
+  background-color: #9b9b9b;
+  padding: 1.5rem 2rem;
+}
+
+footer .content {
+  color: white;
+  display: flex;
+  font-size: .75rem;
+}
+
+footer .copyright {
+  flex-grow: 1;
+}
+
+@media only screen and (max-width: 768px) {
+  footer .content {
+    font-size: .625rem;
+  }
+}
